@@ -3,12 +3,13 @@
 var tabRemoved = false;
 
 browser.browserAction.setBadgeBackgroundColor({color: "gray"});
+browser.tabs.onCreated.addListener(refreshCounterOfActiveTab);
 browser.tabs.onActivated.addListener(refreshCounter);
 browser.tabs.onRemoved.addListener(() => tabRemoved = true);
 
-initCounter();
+refreshCounterOfActiveTab();
 
-function initCounter() {
+function refreshCounterOfActiveTab() {
   browser.tabs.query({currentWindow: true}).then(tabs => updateCounter(getActiveTabId(tabs), tabs), onError);
 }
 

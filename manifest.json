@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Yet Another Tab Counter",
   "author": "Daniel Hofstetter (@dhofstet)",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "description": "Shows the number of open tabs",
 
