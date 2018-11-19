@@ -2,7 +2,7 @@
 
 var tabRemoved = false;
 
-browser.browserAction.setBadgeBackgroundColor({color: "gray"});
+browser.browserAction.setBadgeBackgroundColor({color: "#666"});
 browser.tabs.onCreated.addListener(refreshCounterOfActiveTab);
 browser.tabs.onActivated.addListener(refreshCounter);
 browser.tabs.onRemoved.addListener(() => tabRemoved = true);
